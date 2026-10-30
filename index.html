@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Икебана — мастер-классы и авторские букеты</title>
+<meta name="description" content="Икебана: мастер-классы, авторские композиции и обучение. Запись в Telegram и WhatsApp.">
+<meta name="theme-color" content="#f4efe6">
+
+<!-- ============================================================
+     ЯНДЕКС МЕТРИКА (Шаг 2 инструкции)
+     1. Создайте счётчик на metrika.yandex.ru/add
+     2. Замените XXXXXXXX (в двух местах) на номер вашего счётчика
+     3. Раскомментируйте блок ниже: удалите открывающий и закрывающий
+        маркеры комментария вокруг него (строки со словами START и END)
+     ============================================================ -->
+<!-- START METRIKA
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(XXXXXXXX, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+END METRIKA -->
+
+<style>
+  :root{
+    --paper:#f4efe6;
+    --card:#fffdf8;
+    --ink:#2a2a26;
+    --muted:#7b776c;
+    --green:#3f5b45;
+    --green-dark:#2c4232;
+    --accent:#c8553d;
+    --line:#e4dccb;
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:480px;margin:0 auto;padding:0 16px 40px}
+
+  /* ---------- Шапка ---------- */
+  .hero{
+    margin:0 -16px;
+    padding:28px 16px 8px;
+    text-align:center;
+    background:linear-gradient(180deg,#e7eddc 0%,var(--paper) 100%);
+  }
+  .avatar{
+    width:128px;height:128px;border-radius:50%;
+    margin:0 auto 14px;
+    background:#fffdf8;
+    border:4px solid #fff;
+    box-shadow:0 6px 22px rgba(63,91,69,.18);
+    overflow:hidden;
+    display:grid;place-items:center;
+    background-size:cover;background-position:center;
+  }
+  .avatar svg{width:100%;height:100%}
+  h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:400;
+    font-size:30px;
+    letter-spacing:.5px;
+    color:var(--green-dark);
+  }
+  .tagline{margin-top:4px;color:var(--muted);font-size:15px}
+  .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 6px}
+  .chip{
+    font-size:13px;padding:5px 12px;border-radius:99px;
+    background:#fff;border:1px solid var(--line);color:var(--green);
+  }
+
+  /* ---------- Кнопки ---------- */
+  .links{display:flex;flex-direction:column;gap:12px;margin-top:20px}
+  .btn{
+    display:flex;align-items:center;gap:14px;
+    text-decoration:none;color:var(--ink);
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px 18px;
+    font-size:16px;font-weight:600;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(42,42,38,.08)}
+  .btn:active{transform:scale(.99)}
+  .btn small{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+  .btn .ico{
+    flex:0 0 40px;height:40px;border-radius:12px;display:grid;place-items:center;
+    background:#eef2e6;color:var(--green);font-size:20px;
+  }
+  .btn.primary{background:var(--green);color:#fff;border-color:var(--green)}
+  .btn.primary small{color:#d6e2d8}
+  .btn.primary .ico{background:rgba(255,255,255,.16);color:#fff}
+  .btn.accent{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn.accent small{color:#fbe2db}
+  .btn.accent .ico{background:rgba(255,255,255,.2);color:#fff}
+  .btn .txt{flex:1}
+
+  /* ---------- Секции ---------- */
+  section{margin-top:34px}
+  h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-weight:400;font-size:22px;color:var(--green-dark);
+    text-align:center;margin-bottom:14px;
+  }
+  h2::after{
+    content:"";display:block;width:36px;height:2px;margin:8px auto 0;background:var(--accent);border-radius:2px;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;
+  }
+  .card p+p{margin-top:10px}
+
+  /* Галерея */
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .tile{
+    aspect-ratio:1/1;border-radius:14px;
+    background:var(--img, none), linear-gradient(135deg,var(--c1),var(--c2));
+    background-size:cover;background-position:center;
+    position:relative;overflow:hidden;
+  }
+  .tile:nth-child(1){--c1:#d9e4cf;--c2:#a9c1a0}
+  .tile:nth-child(2){--c1:#f2d9cf;--c2:#e2a58f}
+  .tile:nth-child(3){--c1:#e9e2cf;--c2:#cdbf98}
+  .tile:nth-child(4){--c1:#cfdde0;--c2:#9bb8bd}
+  .tile:nth-child(5){--c1:#ecd3dc;--c2:#d29aae}
+  .tile:nth-child(6){--c1:#dfe6c8;--c2:#b6c58a}
+
+  /* Прайс */
+  .price{list-style:none}
+  .price li{
+    display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+    padding:12px 0;border-bottom:1px dashed var(--line);
+  }
+  .price li:last-child{border-bottom:0}
+  .price b{font-weight:600}
+  .price span.d{display:block;font-size:13px;color:var(--muted);font-weight:400}
+  .price .sum{white-space:nowrap;color:var(--green);font-weight:700}
+
+  /* Отзывы / шаги */
+  .steps{counter-reset:s;list-style:none;display:grid;gap:12px}
+  .steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start}
+  .steps li::before{
+    content:counter(s);flex:0 0 28px;height:28px;border-radius:50%;
+    background:var(--green);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:700;
+  }
+
+  /* Контакты */
+  .contacts{text-align:center}
+  .contacts a{color:var(--green);text-decoration:none;font-weight:600}
+  .contacts a:hover{text-decoration:underline}
+  .socials{display:flex;justify-content:center;gap:10px;margin-top:14px;flex-wrap:wrap}
+  .socials a{
+    padding:9px 16px;border-radius:99px;background:#fff;border:1px solid var(--line);
+    text-decoration:none;color:var(--green);font-weight:600;font-size:14px;
+  }
+
+  footer{margin-top:36px;text-align:center;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- ===== Шапка ===== -->
+  <header class="hero">
+    <!-- Чтобы поставить своё фото: добавьте style="background-image:url('photos/avatar.jpg')" и удалите <svg> -->
+    <div class="avatar">
+      <svg viewBox="0 0 128 128" aria-label="Икебана">
+        <rect width="128" height="128" fill="#f4efe6"/>
+        <!-- ваза -->
+        <path d="M34 92 Q64 118 94 92 L90 100 Q64 124 38 100 Z" fill="#3f5b45"/>
+        <ellipse cx="64" cy="92" rx="30" ry="6" fill="#2c4232"/>
+        <!-- ветки -->
+        <path d="M60 90 Q54 60 70 28" stroke="#6b4e37" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M64 90 Q78 64 92 50" stroke="#6b4e37" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M58 90 Q42 70 34 56" stroke="#6b4e37" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- цветы -->
+        <circle cx="70" cy="26" r="8" fill="#c8553d"/>
+        <circle cx="70" cy="26" r="3" fill="#f2d9cf"/>
+        <circle cx="93" cy="48" r="6" fill="#e2a58f"/>
+        <circle cx="33" cy="54" r="6" fill="#e2a58f"/>
+        <!-- листья -->
+        <ellipse cx="76" cy="52" rx="9" ry="4" fill="#7fa07f" transform="rotate(-30 76 52)"/>
+        <ellipse cx="48" cy="68" rx="9" ry="4" fill="#7fa07f" transform="rotate(30 48 68)"/>
+        <ellipse cx="62" cy="60" rx="8" ry="3.5" fill="#a9c1a0" transform="rotate(-70 62 60)"/>
+      </svg>
+    </div>
+    <h1>Икебана</h1>
+    <p class="tagline">Искусство живых цветов · мастер-классы и авторские композиции</p>
+    <div class="chips">
+      <span class="chip">🌿 Мастер-классы</span>
+      <span class="chip">💐 Букеты на заказ</span>
+      <span class="chip">🎓 Обучение</span>
+    </div>
+  </header>
+
+  <!-- ===== Главные кнопки (как блоки в Taplink) ===== -->
+  <nav class="links" aria-label="Основные ссылки">
+    <a class="btn primary" href="#price" data-goal="click_signup">
+      <span class="ico">🌸</span>
+      <span class="txt">Записаться на мастер-класс<small>Ближайшие даты — в расписании</small></span>
+    </a>
+    <a class="btn accent" href="https://t.me/ВАШ_НИК" target="_blank" rel="noopener" data-goal="click_telegram">
+      <span class="ico">✈️</span>
+      <span class="txt">Написать в Telegram<small>Отвечаю в течение дня</small></span>
+    </a>
+    <a class="btn" href="https://wa.me/79000000000" target="_blank" rel="noopener" data-goal="click_whatsapp">
+      <span class="ico">💬</span>
+      <span class="txt">Написать в WhatsApp</span>
+    </a>
+    <a class="btn" href="#gallery" data-goal="click_gallery">
+      <span class="ico">🖼️</span>
+      <span class="txt">Мои работы<small>Галерея композиций</small></span>
+    </a>
+    <a class="btn" href="https://vk.com/ВАШ_АДРЕС" target="_blank" rel="noopener" data-goal="click_vk">
+      <span class="ico">🅥</span>
+      <span class="txt">Группа ВКонтакте</span>
+    </a>
+  </nav>
+
+  <!-- ===== О себе ===== -->
+  <section id="about">
+    <h2>Об икебане</h2>
+    <div class="card">
+      <p>Икебана — японское искусство составления композиций из живых растений. Главное в ней — не количество цветов, а линия, пауза и баланс.</p>
+      <p>Я помогаю создавать такие композиции своими руками: от первого занятия «с нуля» до авторских работ для интерьера и подарков.</p>
+    </div>
+  </section>
+
+  <!-- ===== Галерея ===== -->
+  <section id="gallery">
+    <h2>Мои работы</h2>
+    <!-- Чтобы вставить фото, меняйте в style значение переменной img: url('photos/1.jpg') — положите файлы в папку photos рядом с index.html -->
+    <div class="gallery">
+      <div class="tile" style="--img:url('photos/1.jpg')"></div>
+      <div class="tile" style="--img:url('photos/2.jpg')"></div>
+      <div class="tile" style="--img:url('photos/3.jpg')"></div>
+      <div class="tile" style="--img:url('photos/4.jpg')"></div>
+      <div class="tile" style="--img:url('photos/5.jpg')"></div>
+      <div class="tile" style="--img:url('photos/6.jpg')"></div>
+    </div>
+  </section>
+
+  <!-- ===== Прайс ===== -->
+  <section id="price">
+    <h2>Услуги и цены</h2>
+    <div class="card">
+      <ul class="price">
+        <li><div><b>Мастер-класс для начинающих</b><span class="d">2 часа, все материалы включены</span></div><span class="sum">3 500 ₽</span></li>
+        <li><div><b>Индивидуальное занятие</b><span class="d">Один на один, программа под вас</span></div><span class="sum">5 000 ₽</span></li>
+        <li><div><b>Авторская композиция на заказ</b><span class="d">Для дома, офиса или подарка</span></div><span class="sum">от 4 000 ₽</span></li>
+        <li><div><b>Корпоративный мастер-класс</b><span class="d">Для групп от 6 человек</span></div><span class="sum">по запросу</span></li>
+      </ul>
+    </div>
+    <div class="links" style="margin-top:14px">
+      <a class="btn primary" href="https://t.me/ВАШ_НИК" target="_blank" rel="noopener" data-goal="click_order">
+        <span class="ico">📅</span>
+        <span class="txt">Выбрать дату и записаться</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Как проходит ===== -->
+  <section id="how">
+    <h2>Как всё проходит</h2>
+    <div class="card">
+      <ol class="steps">
+        <li><div><b>Пишете мне</b><br><span style="color:var(--muted)">Выбираем формат и удобную дату.</span></div></li>
+        <li><div><b>Приходите на занятие</b><br><span style="color:var(--muted)">Все материалы и инструменты уже на столе.</span></div></li>
+        <li><div><b>Забираете композицию домой</b><br><span style="color:var(--muted)">И инструкцию по уходу, чтобы она стояла дольше.</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== Контакты ===== -->
+  <section id="contacts" class="contacts">
+    <h2>Контакты</h2>
+    <div class="card">
+      <p>📍 Ваш город, адрес студии</p>
+      <p>📞 <a href="tel:+79000000000" data-goal="click_phone">+7 900 000-00-00</a></p>
+      <div class="socials">
+        <a href="https://t.me/ВАШ_НИК" target="_blank" rel="noopener" data-goal="click_telegram">Telegram</a>
+        <a href="https://wa.me/79000000000" target="_blank" rel="noopener" data-goal="click_whatsapp">WhatsApp</a>
+        <a href="https://vk.com/ВАШ_АДРЕС" target="_blank" rel="noopener" data-goal="click_vk">ВКонтакте</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Икебана · Все права защищены</footer>
+</main>
+
+<script>
+  /* Цели Яндекс Метрики (Шаг 4 инструкции).
+     В Метрике: Цели → Добавить цель → «JavaScript-событие» → укажите идентификатор,
+     например click_telegram. Скрипт безопасен: пока счётчик не подключён, ничего не происходит. */
+  var METRIKA_ID = null; // впишите число, например 12345678 (то же, что в ym(...) выше)
+
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-goal]');
+    if (!el) return;
+    var goal = el.getAttribute('data-goal');
+    if (METRIKA_ID && typeof window.ym === 'function') {
+      window.ym(METRIKA_ID, 'reachGoal', goal);
+    }
+  });
+</script>
+</body>
+</html>
